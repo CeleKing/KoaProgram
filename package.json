@@ -1,0 +1,29 @@
+{
+  "name": "koa-program",
+  "version": "1.0.0",
+  "description": "npm init",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CeleKing/KoaProgram.git"
+  },
+  "author": "CeleKing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CeleKing/KoaProgram/issues"
+  },
+  "homepage": "https://github.com/CeleKing/KoaProgram#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.48",
+    "@types/koa-router": "^7.0.40"
+  }
+}
