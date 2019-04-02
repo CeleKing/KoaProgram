@@ -1,4 +1,4 @@
 {
-    "presets": ["env", "react"],
+    "presets": ["env", "react", "@babel/preset-react", "babel-loader"],
     "plugins": ["transform-async-to-generator"]
 }
