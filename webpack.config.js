@@ -5,16 +5,19 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: [
-        path.resolve(__dirname, 'app/src/index')
+        './app/src/index.jsx'
     ],
     module: {
         rules: [
             {
                 test: /\.jsx$/,
                 exclude: /node_modules/,
-                loader: '@babel/preset-react'
+                loader: 'babel-loader'
             }
         ]
+    },
+    resolve: {
+        extensions: [" *", ".jsx", ".js"]
     },
     output: {
         path: path.resolve(__dirname, 'app/build'),

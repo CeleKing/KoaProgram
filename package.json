@@ -31,16 +31,18 @@
     "koa-router": "^7.4.0",
     "lodash": "^4.17.11",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "webpack": "^4.29.6"
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.0",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
     "@babel/preset-react": "^7.0.0",
     "@types/koa": "^2.0.48",
     "@types/koa-router": "^7.0.40",
     "babel-loader": "^8.0.5",
-    "babel-preset-env": "^1.7.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
   }
