@@ -25,7 +25,8 @@
   },
   "homepage": "https://github.com/CeleKing/KoaProgram#readme",
   "dependencies": {
-    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@types/react": "^16.8.12",
+    "@types/react-dom": "^16.8.3",
     "html-webpack-plugin": "^3.2.0",
     "koa": "^2.7.0",
     "koa-cors": "0.0.16",
@@ -41,8 +42,11 @@
     "@babel/preset-react": "^7.0.0",
     "@types/koa": "^2.0.48",
     "@types/koa-router": "^7.0.40",
+    "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.4.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
