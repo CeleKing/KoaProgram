@@ -1,10 +1,8 @@
 # Server Koa
-
-npm init
-typescript: npm install --save-dev typescript awesome-typescript-loader source-map-loader
-
-
-
-// TODO webpack优化 cacheDirectory
+## 项目过程
+npm install
+支持热更新
+---
+ *TODO webpack优化 cacheDirectory*
 
 
