@@ -44,7 +44,8 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-          title: 'koaProgram'
+          title: 'koaProgram',
+          template: './app/public/index.html'
         })
     ]
 }

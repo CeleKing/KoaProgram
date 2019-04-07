@@ -6,23 +6,22 @@ export interface HelloProps {
     framework: string
 }
 
-export default class Hello extends React.Component<HelloProps, {}> {
-    onClick() {
-        axios.get('/')
-            .then(function(res) {
-                console.log(res);
-            })
-            .catch(function(err) {
-                console.log(err);
-            })
+export default class Hello extends React.Component<HelloProps, object> {
+    onLogin() {
+        
+    }
+
+    onLogout() {
 
     }
+    
     render() {
         const { compiler, framework} = this.props;
         return (
             <div>
                 <h1>Hello from {compiler} and {framework}!</h1>
-                <button onClick={this.onClick.bind(this)}>Get Request</button>
+                <button onClick={this.onLogin.bind(this)}>Login</button>
+                <button onClick={this.onLogout.bind(this)}>Logout</button>
             </div>
         )
     }
