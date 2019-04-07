@@ -1,23 +1,23 @@
-import * as ActionTypes from '../constants/index';
+import * as ActionTypes from '../constants';
 
-/**
- * 登陆
- * @param username String
- * @param password String
- */
-export const login = (username: string, password: string) => {
+export interface Login {
+    type: ActionTypes.LOG_IN_USER
+}
+
+export interface Logout {
+    type: ActionTypes.LOG_OUT_USER
+}
+
+export type LogAction = Login | Logout;
+
+export function login(): Login {
     return {
-        type: ActionTypes.LOG_IN_USER,
-        username,
-        password
+        type: ActionTypes.LOG_IN_USER
     }
 }
 
-/**
- * 退出
- */
-export const logout = () => {
+export function logout(): Logout {
     return {
-        type: ActionTypes.LOG_OUT_USER,
+        type: ActionTypes.LOG_OUT_USER
     }
 }

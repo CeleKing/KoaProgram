@@ -1,5 +1,6 @@
 import * as React from 'react';
 import axios from 'axios'
+import { store } from '../store';
 
 export interface HelloProps {
     compiler: string, 
@@ -7,8 +8,13 @@ export interface HelloProps {
 }
 
 export default class Hello extends React.Component<HelloProps, object> {
+    constructor(props: HelloProps) {
+        super(props)
+        this.state = {}
+    }
+    
     onLogin() {
-        
+        console.log(store.getState())
     }
 
     onLogout() {

@@ -1,6 +1,4 @@
 export interface StoreState {
-    compiler: string,
+    compiler: string,   
     framework: string,
-    username: string,
-    password: string
 }
