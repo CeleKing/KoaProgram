@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {login, logout} from '../actions'
 import axios from 'axios'
 import { store } from '../store';
 
@@ -14,11 +15,11 @@ export default class Hello extends React.Component<HelloProps, object> {
     }
     
     onLogin() {
-        console.log(store.getState())
+        
     }
 
     onLogout() {
-
+        
     }
     
     render() {
