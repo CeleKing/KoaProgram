@@ -4,8 +4,8 @@ import axios from 'axios'
 import { store } from '../store';
 
 export interface HelloProps {
-    compiler: string, 
-    framework: string
+    user: string, 
+    password: string
 }
 
 export default class Hello extends React.Component<HelloProps, object> {
@@ -15,7 +15,7 @@ export default class Hello extends React.Component<HelloProps, object> {
     }
     
     onLogin() {
-        
+        store.dispatch(login({user: 'admin', password: "123"}))
     }
 
     onLogout() {
@@ -23,10 +23,11 @@ export default class Hello extends React.Component<HelloProps, object> {
     }
     
     render() {
-        const { compiler, framework} = this.props;
+        const { user, password} = this.props;
+        console.log(this.props)
         return (
             <div>
-                <h1>Hello from {compiler} and {framework}!</h1>
+                <h1>Hello from {user} and {password}!</h1>
                 <button onClick={this.onLogin.bind(this)}>Login</button>
                 <button onClick={this.onLogout.bind(this)}>Logout</button>
             </div>

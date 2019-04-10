@@ -1,4 +1,9 @@
 export interface StoreState {
-    compiler: string,   
-    framework: string,
+    user: string,   
+    password: string,
+}
+
+export interface LogMessage {
+    user: string,
+    password: string
 }
