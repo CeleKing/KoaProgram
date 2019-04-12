@@ -3,19 +3,23 @@ import {login, logout} from '../actions'
 import axios from 'axios'
 import { store } from '../store';
 
-export interface HelloProps {
+type HelloProps = {
     user: string, 
     password: string
 }
 
-export default class Hello extends React.Component<HelloProps, object> {
+type HelloState = {
+
+}
+
+export default class Hello extends React.Component<HelloState> {
     constructor(props: HelloProps) {
         super(props)
         this.state = {}
     }
     
     onLogin() {
-        store.dispatch(login({user: 'admin', password: "123"}))
+        store.dispatch(login({user: 'str', password: "123"}))
     }
 
     onLogout() {
@@ -23,11 +27,9 @@ export default class Hello extends React.Component<HelloProps, object> {
     }
     
     render() {
-        const { user, password} = this.props;
-        console.log(this.props)
         return (
             <div>
-                <h1>Hello from {user} and {password}!</h1>
+                <h1>Hello</h1>
                 <button onClick={this.onLogin.bind(this)}>Login</button>
                 <button onClick={this.onLogout.bind(this)}>Logout</button>
             </div>
