@@ -1,7 +1,10 @@
 import * as React from 'react';
 import {login, logout} from '../actions'
+import { StoreState} from '../types'
 import axios from 'axios'
 import { store } from '../store';
+import {Dispatch} from 'redux';
+import { connect } from 'react-redux';
 
 type HelloProps = {
     user: string, 
@@ -12,18 +15,18 @@ type HelloState = {
 
 }
 
-export default class Hello extends React.Component<HelloState> {
+class Hello extends React.Component<HelloState> {
     constructor(props: HelloProps) {
         super(props)
         this.state = {}
     }
-    
+
     onLogin() {
-        store.dispatch(login({user: 'str', password: "123"}))
+
     }
 
     onLogout() {
-        
+
     }
     
     render() {
@@ -36,4 +39,20 @@ export default class Hello extends React.Component<HelloState> {
         )
     }
 }
+
+const mapStateToProps = (state: HelloState, ownProps: HelloProps) => {
+    console.log(state, ownProps);
+    return {
+        value: state
+    }
+}
+const mapDispatchToProps = (dispatch: Dispatch, ownProps: HelloProps) => {
+    return {
+        login: () => {
+            dispatch(login({user: 'str', password: "123"}))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Hello)
 
