@@ -16,6 +16,7 @@ var render = require('co-ejs')
 var config = require('config-lite')
 
 var merge = require('merge-descriptors')
+// TODO co.ts
 var core = require('./co.ts')
 var renderConf = require(config.renderConf)
 merge(renderConf.locals || {}, core, false)
